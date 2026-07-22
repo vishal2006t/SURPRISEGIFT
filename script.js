@@ -154,10 +154,12 @@ heartTrigger.onclick = () => {
 
     setTimeout(() => {
 
-        heartTrigger.style.display = "none";
-        heartTapHint.style.display = "none";
+      heartTrigger.style.display = "none";
+heartTapHint.style.display = "none";
 
-        revealFrames();
+document.getElementById("gallery").classList.add("show");
+
+revealFrames();
 
     }, 700);
 
