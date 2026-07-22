@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Happy Birthday ❤️</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,500&family=Great+Vibes&display=swap" rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.2/dist/confetti.browser.min.js"></script>
+</head>
+
+<body>
+
+<!-- Background Effects -->
+<div id="hearts"></div>
+<div id="stars"></div>
+
+<!-- ============================
+     1. GIFT BOX (first screen)
+============================= -->
+<section id="giftScreen" class="screen active">
+
+    <p class="eyebrow">A Little Something For You</p>
+
+    <h1 class="title gold-text">A Special Gift ❤️</h1>
+
+    <div id="giftBox">
+
+        <div class="gift-glow"></div>
+
+        <div class="surprise-card">
+            <h2>❤️</h2>
+            <h3>Happy Birthday</h3>
+            <p>Special Surprise</p>
+        </div>
+
+        <div class="ribbon vertical"></div>
+        <div class="ribbon horizontal"></div>
+
+        <div class="lid">
+            <div class="bow"></div>
+        </div>
+
+        <div class="box">
+            <div class="box-shine"></div>
+        </div>
+
+    </div>
+
+    <p class="tap">Tap the Gift 🎁</p>
+
+</section>
+
+<!-- ============================
+     2. PASSWORD SCREEN
+============================= -->
+<section id="lockScreen" class="screen">
+
+    <div class="glass lock-container">
+
+        <div class="heart-lock">❤️</div>
+
+        <h2 class="serif-heading">Private Surprise</h2>
+
+        <p>Enter Your DOB</p>
+
+        <input
+            type="password"
+            id="passwordInput"
+            placeholder="MMDDYYYY"
+            maxlength="8"
+            readonly>
+
+        <div class="keypad">
+
+            <button class="key">1</button>
+            <button class="key">2</button>
+            <button class="key">3</button>
+
+            <button class="key">4</button>
+            <button class="key">5</button>
+            <button class="key">6</button>
+
+            <button class="key">7</button>
+            <button class="key">8</button>
+            <button class="key">9</button>
+
+            <button class="key delete">⌫</button>
+            <button class="key">0</button>
+            <button class="key clear">C</button>
+
+        </div>
+
+        <p id="wrongPassword"></p>
+
+    </div>
+
+</section>
+
+<!-- ============================
+     3. SMALL WISH SCREEN
+============================= -->
+<section id="wishScreen" class="screen">
+
+    <div class="glass wish-card">
+
+        <span class="sparkle-icon">✦</span>
+
+        <h1 class="serif-heading gold-text">A Small Wish</h1>
+
+        <p class="small-wish">
+            Before anything else&nbsp;&mdash; just a little wish,
+            wrapped in gold, sent your way.
+        </p>
+
+        <p class="small-wish emphasis">
+            May today be as lovely as you are.
+        </p>
+
+        <button id="wishContinueBtn">Continue ❤️</button>
+
+    </div>
+
+</section>
+
+<!-- ============================
+     4 & 5. HEART REVEAL + GALLERY
+============================= -->
+<section id="galleryScreen" class="screen">
+
+    <h1 class="serif-heading gold-text">Beautiful Memories</h1>
+    <p class="tap" id="heartTapHint">Tap the Heart 💖</p>
+
+    <div id="heartTrigger">💖</div>
+
+    <div id="gallery">
+
+        <div class="frame"><img src="images (1).jfif"></div>
+        <div class="frame"><img src="images (2).jfif"></div>
+        <div class="frame"><img src="images (3).jfif"></div>
+        <div class="frame"><img src="images (4).jfif"></div>
+        <div class="frame"><img src="images (5).jfif"></div>
+        <div class="frame"><img src="images (6).jfif"></div>
+         <div class="frame"><img src="images (7).jfif"></div>
+          <div class="frame"><img src="images (8).jfif"></div>
+
+    </div>
+
+    <button id="letterBtn" class="hidden-btn">Read Letter 💌</button>
+
+</section>
+
+<!-- ============================
+     6. LETTER
+============================= -->
+<section id="letterScreen" class="screen">
+
+    <div class="letter">
+
+        <h1 class="serif-heading gold-text">My Letter ❤️</h1>
+
+        <p id="loveLetter"></p>
+
+        <button id="celebrateBtn">Celebrate 🎉</button>
+
+    </div>
+
+</section>
+
+<!-- ============================
+     7. CELEBRATION (final)
+============================= -->
+<section id="celebrationScreen" class="screen">
+
+    <h1 class="birthday script-text">Happy Birthday</h1>
+
+    <h2 id="personName"></h2>
+
+    <p class="wish">
+        May your life always be filled with happiness, smiles, love and success.
+    </p>
+
+    <button id="restartBtn">Replay Surprise</button>
+
+</section>
+
+<!-- Music -->
+<audio id="bgMusic" loop>
+    <source src="birthy.mpeg" type="audio/mpeg">
+</audio>
+
+<button id="musicBtn">🎵</button>
+
+<script src="config.js"></script>
+<script src="script.js"></script>
+
+</body>
+
+</html>
