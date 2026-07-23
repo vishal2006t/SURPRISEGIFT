@@ -5,7 +5,7 @@
 
 
 // Password to open surprise
-const PASSWORD = "27122009";
+const PASSWORD = "12342026";
 
 
 // Person Name
